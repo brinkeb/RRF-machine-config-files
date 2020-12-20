@@ -53,7 +53,7 @@ M574 X1 S3                                                 ; Set endstops contro
 M574 Y1 S3                                                 ; Set endstops controlled by the motor load detection
 
 ; Stallgaurd Sensitivity
-M98 P"current-sense-homing.g"                              ; Set the current and sensitivity for normal routine, per the macro
+M98 P"current-sense-normal.g"                              ; Set the current and sensitivity for normal routine, per the macro
 
 ; Z-Probe Settings for BLTouch
 M558 P9 C"^zprobe.in" H2.5 F200 T10000                     ; BLTouch, connected to Z probe IN pin
