@@ -79,7 +79,8 @@ M557 X25:225 Y-10:170 P9                                    ; Define mesh grid f
 ; Heatbed Heaters and Thermistor Bed 
 M308 S0 P"bed_temp" Y"thermistor" A"Build Plate" T100000 B4138 R4700 ; Set thermistor + ADC parameters for heater 0 Bed
 M950 H0 C"bedheat" T0                                      ; Creates Bed Heater
-M307 H0 A91.5 C264.0 D10.2 S1.00 V24.0 B0                  ; Bed PID Calibration @ 75c - updated 11AUG2020
+;M307 H0 A91.5 C264.0 D10.2 S1.00 V24.0 B0                  ; Bed PID Calibration @ 75c - updated 11AUG2020
+M307 H0 A169.3 C490.9 D9.0 S1.00 V24.0 B0
 M140 H0                                                    ; Bed uses Heater 0
 M143 H0 S110                                               ; Set temperature limit for heater 0 to 120C Bed
 
@@ -90,7 +91,8 @@ M591 D0 P2 C"e0stop" S1                                    ; Filament Runout Sen
 M308 S1 P"e0_temp" Y"thermistor" A"Nozzle" T100000 B4138 R4700  ; Set thermistor + ADC parameters for heater 1 HotEnd
 ;M308 S1 P"e0_temp" Y"pt1000" A"Mosquito"                   ; Set extruder thermistor for PT1000
 M950 H1 C"e0heat" T1                                       ; Create HotEnd Heater
-M307 H1 A330.0 C100.7 D4.9 S1.00 V24.2 B0                  ; Hotend PID Calibration @ 240c - updated 09AUG2020
+;M307 H1 A330.0 C100.7 D4.9 S1.00 V24.2 B0                  ; Hotend PID Calibration @ 240c - updated 09AUG2020
+M307 H1 A433.8 C136.2 D4.5 S1.00 V24.2 B0
 M143 H1 S285                                               ; Set temperature limit for heater 1 to 285C HotEnd
 M302 S190 R190                                             ; Allow cold extrudes, S-Minimum extrusion temperature, R-Minimum retraction temperature
 
