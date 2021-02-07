@@ -6,8 +6,8 @@ G28                                                        ; Home all axis.
 
 M558 F50 A5 S0.003                                         ; Slow z-probe, up to 5 probes until disparity is 0.003 or less - else yield average.
 while iterations <=2                                       ; Perform 3 passes.
-   G30 P0 X25 Y105 Z-99999                                 ; Probe near a leadscrew, halfway along Y-axis.
-   G30 P1 X235 Y105 Z-99999 S2                             ; Probe near a leadscrew and calibrate 2 motors.
+   G30 P0 X10 Y105 Z-99999                                 ; Probe near a leadscrew, halfway along Y-axis.
+   G30 P1 X225 Y105 Z-99999 S2                             ; Probe near a leadscrew and calibrate 2 motors.
    G1 X145 F10000                                          ; Move to the center of the bed.
    G30                                                     ; Probe the bed at the current XY position.
    M400                                                    ; Finish all moves, clear the buffer.
@@ -18,8 +18,8 @@ while move.calibration.initial.deviation >= 0.003          ; Perform additional 
       M300 S3000 P500                                      ; Sound alert, the required deviation could not be achieved.
       M558 F200 A1                                         ; Set normal z-probe speed.
       abort "!!! ABORTED !!! Failed to achieve < 0.002 deviation. Current deviation is " ^ move.calibration.initial.deviation ^ "mm."
-   G30 P0 X25 Y105 Z-99999                                 ; Probe near the left leadscrew, halfway along Y-axis.
-   G30 P1 X235 Y105 Z-99999 S2                             ; Probe near the right leadscrew and calibrate 2 motors.
+   G30 P0 X10 Y105 Z-99999                                 ; Probe near the left leadscrew, halfway along Y-axis.
+   G30 P1 X225 Y105 Z-99999 S2                             ; Probe near the right leadscrew and calibrate 2 motors.
    G1 X145 F10000                                          ; Move the nozzle to the center of the bed.
    G30                                                     ; Probe the bed at the current XY position.
    M400                                                    ; Finish all moves, clear the buffer.
