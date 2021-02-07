@@ -11,7 +11,7 @@ G91                                                        ; Set relative positi
 G1 H0 Z3 F6000                                             ; Lift Z axis 3mm.
 G90                                                        ; Set absolute positioning.
 
-G1 X146 Y144 F3600                                         ; Go to the center of the bed for probe point.
+G1 X148.5 Y142.5 F3600                                         ; Go to the center of the bed for probe point.
 
 M558 F1000 A1                                              ; Set probing speed to fast for the first pass.  
 G30                                                        ; Perform Z probing.
