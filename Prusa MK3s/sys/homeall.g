@@ -25,7 +25,7 @@ G1 H1 Y-215 F3000                                          ; Move quickly to the
 ; HOME Z
 G1 H2 Z2 F2600                                             ; Raise the Z axis 2mm to ensure it is above the Z probe trigger height.
 G90                                                        ; Set absolute positioning mode.
-G1 X146 Y144 F1600                                         ; Go to the center of the bed for probe point.
+G1 X148.5 Y142.5 F1600                                         ; Go to the center of the bed for probe point.
 
 M558 F500 A1                                              ; Set the Z-probe to fast for the first pass.  
 G30                                                        ; Perform Z probing.
