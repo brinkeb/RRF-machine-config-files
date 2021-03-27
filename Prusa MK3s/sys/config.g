@@ -42,7 +42,7 @@ M84 S30                                                   ; Set idle timeout bef
 
 ; Motor remapping for dual Z and axis Limits
 M584 X0 Y1 Z2:4 E3                                         ; Set two Z motors connected to driver outputs Z and E1
-M671 X-37:287 Y0:0 S10                                     ; Leadscrew at left connected to Z, leadscrew at right connected to E1  
+M671 X-37:293 Y0:0 S10                                     ; Leadscrew at left connected to Z, leadscrew at right connected to E1  
 
 ; Set bed dimensions
 M208 X0:250 Y-4:215 Z0:320                              ; X carriage moves from 0 to 250, Y bed goes from 0 to 210
