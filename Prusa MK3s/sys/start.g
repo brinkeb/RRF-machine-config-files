@@ -18,7 +18,7 @@ M290 R0 S0                                                 ; Clear any baby-step
 M106 S0                                                    ; Turn part cooling blower off if it is on.
 M703                                                       ; Execute loaded filament's config.g.
 G32
-G29 S1                                                        ; Home all.
+G29 S0                                                        ; Home all.
 
 ;G1 Z5 X100 Y100                                           ; [PINDA] Place nozzle center of the bed, 5mm up.
 
